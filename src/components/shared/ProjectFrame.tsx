@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { ArrowUpRight, GitBranch, Network } from 'lucide-react'
 import type { PortfolioProject } from '@/types/portfolio'
 import { Badge } from '@/components/ui/badge'
@@ -84,6 +84,8 @@ export default function ProjectFrame({
   highlightsLabel,
   sourceLabel,
 }: ProjectFrameProps) {
+  const [selectedTech, setSelectedTech] = useState<string | null>(null)
+
   return (
     <Card className="project-frame" role="article" aria-labelledby={'project-' + project.id}>
       {project.visual === 'evidence' ? <EvidenceVisual /> : <NetworkVisual />}
@@ -118,7 +120,18 @@ export default function ProjectFrame({
           <h3>{stackLabel}</h3>
           <ul className="project-frame__stack" aria-label={stackLabel}>
             {project.tags.map((tag) => (
-              <li key={tag}><Badge variant="outline" className="project-frame__tag">{tag}</Badge></li>
+              <li key={tag}>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  className="project-frame__tag"
+                  aria-pressed={selectedTech === tag}
+                  onClick={() => setSelectedTech(current => current === tag ? null : tag)}
+                >
+                  {tag}
+                </Button>
+              </li>
             ))}
           </ul>
         </div>
