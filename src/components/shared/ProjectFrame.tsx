@@ -63,7 +63,7 @@ function NetworkVisual() {
           <path d="M 50 50 L 21 24 M 50 50 L 79 24 M 50 50 L 21 77 M 50 50 L 79 77" />
         </svg>
         <div className="network-scene__core">
-          <Network size={26} strokeWidth={1.4} />
+          <Network size={24} strokeWidth={1.4} />
           <span>AGENT</span>
           <strong>CORE</strong>
         </div>
@@ -147,9 +147,9 @@ export default function ProjectFrame({
                   rel="noopener noreferrer"
                   aria-label={project.name + ' — ' + link.label + ' (GitHub)'}
                 >
-                  <GitBranch size={15} aria-hidden="true" />
+                  <GitBranch size={16} aria-hidden="true" />
                   {link.label}
-                  <ArrowUpRight size={14} aria-hidden="true" />
+                  <ArrowUpRight size={16} aria-hidden="true" />
                 </a>
               </Button>
             ))}
