@@ -49,7 +49,6 @@ export interface PortfolioMessages {
     scroll: string
   }
   profile: {
-    eyebrow: string
     title: string
     emphasis: string
     summary: string
@@ -67,10 +66,6 @@ export interface PortfolioMessages {
     stack: string[]
   }
   work: {
-    eyebrow: string
-    title: string
-    emphasis: string
-    intro: string
     highlightsLabel: string
     stackLabel: string
     sourceLabel: string

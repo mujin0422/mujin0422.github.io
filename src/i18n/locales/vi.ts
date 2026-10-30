@@ -23,7 +23,6 @@ const vi: PortfolioMessages = {
     scroll: 'CUỘN ĐỂ KHÁM PHÁ',
   },
   profile: {
-    eyebrow: '01 / DỰ ÁN ĐANG PHÁT TRIỂN',
     title: 'Multi-AI Agent cho',
     emphasis: 'tự động hoá cấu hình mạng.',
     summary: 'Một hệ thống đa tác nhân AI biến yêu cầu vận hành thành kế hoạch cấu hình có cấu trúc, phối hợp kiểm tra chéo trước khi đề xuất thay đổi lên hạ tầng mạng.',
@@ -46,10 +45,6 @@ const vi: PortfolioMessages = {
     stack: ['Python', 'LLM Orchestration', 'Network Automation', 'React', 'TypeScript'],
   },
   work: {
-    eyebrow: '02 / DỰ ÁN NỔI BẬT',
-    title: 'Từ ý tưởng',
-    emphasis: 'đến sản phẩm thực tế.',
-    intro: 'Hai dự án tôi đang xây dựng, kết hợp trải nghiệm người dùng, hệ thống Linux và tự động hóa hạ tầng mạng bằng AI.',
     highlightsLabel: 'Điểm nổi bật',
     stackLabel: 'Công nghệ sử dụng',
     sourceLabel: 'Mã nguồn',

@@ -6,18 +6,7 @@ export default function MyProject() {
   const { work } = messages
 
   return (
-    <section className="projects-section" id="projects" aria-labelledby="projects-title">
-      <div className="projects-heading">
-        <div className="projects-heading__label">
-          <span aria-hidden="true">✳</span>
-          {work.eyebrow}
-        </div>
-        <div>
-          <h2 id="projects-title">{work.title}<br /><em>{work.emphasis}</em></h2>
-          <p>{work.intro}</p>
-        </div>
-      </div>
-
+    <section className="projects-section" id="projects" aria-label={messages.nav.work}>
       <div className="projects-list">
         {work.projects.map((project) => (
           <ProjectFrame

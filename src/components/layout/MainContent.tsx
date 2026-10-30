@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button'
 import { MyProfile } from '@/features/my-profile'
 import { MyProject } from '@/features/my-project'
 import { useI18n } from '@/i18n/I18nProvider'
@@ -16,9 +17,11 @@ export default function MainContent() {
         </div>
         <div className="reset-bottom">
           <p>{messages.hero.description}</p>
-          <a className="reset-explore" href="#projects">
-            {messages.hero.explore} <span aria-hidden="true">↗</span>
-          </a>
+          <Button variant="link" asChild className="reset-explore">
+            <a href="#projects">
+              {messages.hero.explore} <span aria-hidden="true">↗</span>
+            </a>
+          </Button>
         </div>
       </section>
       <MyProfile />

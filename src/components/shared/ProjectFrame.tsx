@@ -1,5 +1,9 @@
 import { ArrowUpRight, GitBranch, Network } from 'lucide-react'
 import type { PortfolioProject } from '@/types/portfolio'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
 
 interface ProjectFrameProps {
   project: PortfolioProject
@@ -80,51 +84,57 @@ export default function ProjectFrame({
   sourceLabel,
 }: ProjectFrameProps) {
   return (
-    <article className="project-frame" aria-labelledby={'project-' + project.id}>
+    <Card className="project-frame" role="article" aria-labelledby={'project-' + project.id}>
       {project.visual === 'evidence' ? <EvidenceVisual /> : <NetworkVisual />}
-      <div className="project-frame__body">
+      <CardContent className="project-frame__body">
         <div className="project-frame__meta">
           <span className="project-frame__number">/ {project.id}</span>
           <span className="project-frame__category">{project.category}</span>
         </div>
         <div className="project-frame__intro">
-          <span className="project-frame__status"><i aria-hidden="true" />{project.status}</span>
-          <h3 id={'project-' + project.id}>{project.name}</h3>
+          <Badge variant="outline" className="project-frame__status"><span className="project-frame__status-dot" aria-hidden="true" />{project.status}</Badge>
+          <h2 id={'project-' + project.id}>{project.name}</h2>
           <p>{project.description}</p>
         </div>
+        <Separator className="project-frame__separator" />
         <div className="project-frame__details">
-          <h4>{highlightsLabel}</h4>
+          <h3>{highlightsLabel}</h3>
           <ul className="project-frame__highlights">
             {project.highlights.map((highlight) => (
               <li key={highlight}>{highlight}</li>
             ))}
           </ul>
         </div>
+        <Separator className="project-frame__separator" />
         <div className="project-frame__details">
-          <h4>{stackLabel}</h4>
+          <h3>{stackLabel}</h3>
           <ul className="project-frame__stack" aria-label={stackLabel}>
-            {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
+            {project.tags.map((tag) => (
+              <li key={tag}><Badge variant="outline" className="project-frame__tag">{tag}</Badge></li>
+            ))}
           </ul>
         </div>
+        <Separator className="project-frame__separator" />
         <div className="project-frame__links" aria-label={sourceLabel}>
           <span>{sourceLabel}</span>
           <div>
             {project.links.map((link) => (
-              <a
-                href={link.href}
-                key={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={project.name + ' — ' + link.label + ' (GitHub)'}
-              >
-                <GitBranch size={15} aria-hidden="true" />
-                {link.label}
-                <ArrowUpRight size={14} aria-hidden="true" />
-              </a>
+              <Button key={link.href} variant="outline" size="sm" asChild className="project-frame__link">
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={project.name + ' — ' + link.label + ' (GitHub)'}
+                >
+                  <GitBranch size={15} aria-hidden="true" />
+                  {link.label}
+                  <ArrowUpRight size={14} aria-hidden="true" />
+                </a>
+              </Button>
             ))}
           </div>
         </div>
-      </div>
-    </article>
+      </CardContent>
+    </Card>
   )
 }

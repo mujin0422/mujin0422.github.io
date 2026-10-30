@@ -1,4 +1,4 @@
-import { ArrowRightIcon, NetworkIcon } from 'lucide-react'
+import { ArrowRightIcon } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
@@ -9,14 +9,10 @@ export default function MyProfile() {
   const { profile } = messages
 
   return (
-    <section className="profile-section" id="profile">
+    <section className="profile-section" id="profile" aria-labelledby="profile-title">
       <div className="profile-heading">
-        <div className="profile-label">
-          <NetworkIcon aria-hidden="true" />
-          <span>{profile.eyebrow}</span>
-        </div>
         <div>
-          <h2>{profile.title}<br /><em>{profile.emphasis}</em></h2>
+          <h2 id="profile-title">{profile.title}<br /><em>{profile.emphasis}</em></h2>
           <p className="profile-summary">{profile.summary}</p>
         </div>
       </div>
