@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { ArrowUpRight, GitBranch, Network } from 'lucide-react'
 import type { PortfolioProject } from '@/types/portfolio'
 import { Badge } from '@/components/ui/badge'
@@ -93,7 +94,14 @@ export default function ProjectFrame({
         </div>
         <div className="project-frame__intro">
           <Badge variant="outline" className="project-frame__status"><span className="project-frame__status-dot" aria-hidden="true" />{project.status}</Badge>
-          <h2 id={'project-' + project.id}>{project.name}</h2>
+          <h2 id={'project-' + project.id} aria-label={project.name}>
+            {project.name.split(' ').map((word, index, words) => (
+              <Fragment key={index}>
+                <span className="hero-glitch project-name-glitch" data-text={word} aria-hidden="true">{word}</span>
+                {index < words.length - 1 ? ' ' : null}
+              </Fragment>
+            ))}
+          </h2>
           <p>{project.description}</p>
         </div>
         <Separator className="project-frame__separator" />
