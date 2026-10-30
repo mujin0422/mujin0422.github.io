@@ -12,7 +12,7 @@ export default function MainContent() {
         <div className="reset-kicker"><span /> PORTFOLIO / 2026</div>
         <div className="reset-title-wrap">
           <p>CREATIVE DEVELOPER</p>
-          <h1 id="portfolio-title">MUJIN<span>.</span></h1>
+          <h1 id="portfolio-title" className="hero-glitch" data-text="MUJIN" aria-label="MUJIN">MUJIN<span>.</span></h1>
         </div>
         <div className="reset-bottom">
           <p>{messages.hero.description}</p>
