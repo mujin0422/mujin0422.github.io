@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, Network } from 'lucide-react'
+import { ArrowUpRight, GitBranch, Network } from 'lucide-react'
 import type { PortfolioProject } from '@/types/portfolio'
 
 interface ProjectFrameProps {
@@ -117,7 +117,7 @@ export default function ProjectFrame({
                 rel="noopener noreferrer"
                 aria-label={project.name + ' — ' + link.label + ' (GitHub)'}
               >
-                <Github size={15} aria-hidden="true" />
+                <GitBranch size={15} aria-hidden="true" />
                 {link.label}
                 <ArrowUpRight size={14} aria-hidden="true" />
               </a>
