@@ -8,11 +8,12 @@ Portfolio cá nhân viết bằng React, TypeScript, Vite, Tailwind CSS và shad
 src/
 ├── app/                    # App shell và global styles
 ├── components/
-│   ├── layout/             # Header, Footer
+│   ├── layout/             # Header, MainContent, Footer
+│   ├── shared/             # ProjectFrame tái sử dụng cho các project
 │   └── ui/                 # Component shadcn/ui dùng lại
 ├── features/
 │   ├── my-profile/         # Module rỗng, chờ xây lại
-│   ├── my-project/         # Module rỗng, chờ xây lại
+│   ├── my-project/         # Evidence Note Board và Network Multi-Agent System
 │   └── my-contact/         # Module rỗng, chờ xây lại
 ├── i18n/
 │   ├── locales/            # Nội dung tiếng Việt và tiếng Anh
@@ -49,4 +50,4 @@ npx shadcn@latest add <component-name>
 
 Ví dụ: `npx shadcn@latest add card dialog sheet`. Cấu hình registry nằm trong `components.json`.
 
-Ba feature đang được giữ rỗng có chủ đích. Khi xây lại một feature, export public component của nó qua file `index.ts` tương ứng.
+Hai feature `my-profile` và `my-project` đang có nội dung thực tế; `my-contact` vẫn để trống có chủ đích. Mỗi feature xuất public component qua file `index.ts` tương ứng.

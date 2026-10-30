@@ -1,16 +1,17 @@
 export type Language = 'vi' | 'en'
 
-export type ProjectVisual = 'kinu' | 'nami' | 'sora'
+export type ProjectVisual = 'evidence' | 'network'
 
 export interface PortfolioProject {
   id: string
   name: string
-  type: string
-  year: string
+  category: string
+  status: string
   description: string
+  highlights: string[]
   tags: string[]
-  color: string
   visual: ProjectVisual
+  links: Array<{ label: string; href: string }>
 }
 
 export interface PortfolioService {
@@ -70,7 +71,9 @@ export interface PortfolioMessages {
     title: string
     emphasis: string
     intro: string
-    note: string
+    highlightsLabel: string
+    stackLabel: string
+    sourceLabel: string
     projects: PortfolioProject[]
   }
   about: {
