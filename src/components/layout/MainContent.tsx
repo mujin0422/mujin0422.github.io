@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button'
-import { MyProfile } from '@/features/my-profile'
 import { MyProject } from '@/features/my-project'
 import { useI18n } from '@/i18n/I18nProvider'
 
@@ -24,7 +23,6 @@ export default function MainContent() {
           </Button>
         </div>
       </section>
-      <MyProfile />
       <MyProject />
     </main>
   )
