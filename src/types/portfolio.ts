@@ -20,12 +20,6 @@ export interface PortfolioService {
   description: string
 }
 
-export interface ProfileAgent {
-  code: string
-  name: string
-  description: string
-}
-
 export interface PortfolioMessages {
   meta: {
     locale: string
@@ -47,23 +41,6 @@ export interface PortfolioMessages {
     description: string
     explore: string
     scroll: string
-  }
-  profile: {
-    title: string
-    emphasis: string
-    summary: string
-    statusLabel: string
-    status: string
-    problemLabel: string
-    problem: string
-    solutionLabel: string
-    solution: string
-    flowLabel: string
-    agents: ProfileAgent[]
-    roleLabel: string
-    roles: string[]
-    stackLabel: string
-    stack: string[]
   }
   work: {
     highlightsLabel: string
