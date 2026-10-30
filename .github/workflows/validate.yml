@@ -26,5 +26,8 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+      - name: Check 4px design grid
+        run: npm run check:grid
+
       - name: Build
         run: npm run build
