@@ -23,7 +23,6 @@ const en: PortfolioMessages = {
     scroll: 'SCROLL TO EXPLORE',
   },
   profile: {
-    eyebrow: '01 / PROJECT IN DEVELOPMENT',
     title: 'Multi-AI Agent for',
     emphasis: 'automated network configuration.',
     summary: 'A multi-agent AI system that turns operational requests into structured configuration plans, coordinating cross-checks before proposing changes to network infrastructure.',
@@ -46,10 +45,6 @@ const en: PortfolioMessages = {
     stack: ['Python', 'LLM Orchestration', 'Network Automation', 'React', 'TypeScript'],
   },
   work: {
-    eyebrow: '02 / SELECTED WORK',
-    title: 'From an idea',
-    emphasis: 'to a working system.',
-    intro: 'Two projects in progress, combining thoughtful interfaces with Linux desktop engineering and AI-driven network automation.',
     highlightsLabel: 'Highlights',
     stackLabel: 'Tech stack',
     sourceLabel: 'Source code',
