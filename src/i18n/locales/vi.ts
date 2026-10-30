@@ -1,0 +1,111 @@
+import type { PortfolioMessages } from '@/types/portfolio'
+
+const vi: PortfolioMessages = {
+  meta: {
+    locale: 'vi-VN',
+    title: 'Mujin — Creative Developer',
+    description: 'Portfolio của Mujin — Frontend developer tập trung vào trải nghiệm số rõ ràng, đẹp và hữu ích.',
+  },
+  nav: {
+    work: 'Dự án',
+    about: 'Giới thiệu',
+    contact: 'Liên hệ',
+    menu: 'Mở menu',
+    home: 'Về đầu trang',
+    language: 'Đổi sang tiếng Anh',
+  },
+  hero: {
+    kicker: 'Frontend developer × Creative thinker',
+    title: 'Tạo nên trải nghiệm số',
+    emphasis: 'đáng nhớ',
+    description: 'Tôi giúp ý tưởng trở thành những sản phẩm số rõ ràng, đẹp và thực sự hữu ích — từ chiến lược đến từng dòng code.',
+    explore: 'Xem dự án',
+    scroll: 'CUỘN ĐỂ KHÁM PHÁ',
+  },
+  profile: {
+    eyebrow: '01 / DỰ ÁN ĐANG PHÁT TRIỂN',
+    title: 'Multi-AI Agent cho',
+    emphasis: 'tự động hoá cấu hình mạng.',
+    summary: 'Một hệ thống đa tác nhân AI biến yêu cầu vận hành thành kế hoạch cấu hình có cấu trúc, phối hợp kiểm tra chéo trước khi đề xuất thay đổi lên hạ tầng mạng.',
+    statusLabel: 'Trạng thái',
+    status: 'Đang phát triển',
+    problemLabel: 'Bài toán',
+    problem: 'Cấu hình mạng thủ công tốn thời gian, khó đồng bộ giữa nhiều thiết bị và dễ phát sinh sai lệch khi yêu cầu thay đổi liên tục.',
+    solutionLabel: 'Hướng giải quyết',
+    solution: 'Phân tách quy trình thành các AI agent chuyên trách để hiểu ý định, lập kế hoạch, sinh cấu hình và kiểm tra rủi ro theo từng bước có thể quan sát.',
+    flowLabel: 'Luồng tác nhân',
+    agents: [
+      { code: '01', name: 'Intent Agent', description: 'Chuẩn hoá yêu cầu ngôn ngữ tự nhiên thành mục tiêu và ràng buộc mạng.' },
+      { code: '02', name: 'Planner Agent', description: 'Phân tích topology và xây dựng kế hoạch thay đổi theo thứ tự an toàn.' },
+      { code: '03', name: 'Config Agent', description: 'Tạo cấu hình theo thiết bị, vendor và chính sách đã xác định.' },
+      { code: '04', name: 'Validator Agent', description: 'Kiểm tra cú pháp, tính nhất quán và cảnh báo xung đột trước triển khai.' },
+    ],
+    roleLabel: 'Vai trò của tôi',
+    roles: ['Thiết kế kiến trúc multi-agent', 'Xây dựng orchestration workflow', 'Phát triển dashboard giám sát', 'Thiết kế lớp kiểm tra cấu hình'],
+    stackLabel: 'Công nghệ định hướng',
+    stack: ['Python', 'LLM Orchestration', 'Network Automation', 'React', 'TypeScript'],
+  },
+  work: {
+    eyebrow: '01 / DỰ ÁN CHỌN LỌC',
+    title: 'Một vài ý tưởng',
+    emphasis: 'đã thành hình.',
+    intro: 'Ba concept minh hoạ cách tôi tiếp cận sản phẩm: bắt đầu từ câu chuyện, tìm đúng hệ thống, rồi chăm chút từng tương tác.',
+    note: '* Các dự án trên là concept minh hoạ và có thể thay bằng case study thật của bạn.',
+    projects: [
+      {
+        id: '01', name: 'Kinu', type: 'E-commerce concept', year: '2026',
+        description: 'Một trải nghiệm mua sắm nội thất tĩnh lặng, nơi sản phẩm được kể bằng chất liệu, khoảng thở và chuyển động vừa đủ.',
+        tags: ['React', 'Motion', 'UX'], color: '#496aff', visual: 'kinu',
+      },
+      {
+        id: '02', name: 'Nami', type: 'Travel dashboard concept', year: '2026',
+        description: 'Bảng điều khiển chuyến đi gom lịch trình, thời tiết và ghi chú vào một nhịp xem rõ ràng trên mọi thiết bị.',
+        tags: ['Product design', 'React', 'API'], color: '#ff6b3d', visual: 'nami',
+      },
+      {
+        id: '03', name: 'Sora', type: 'Editorial concept', year: '2025',
+        description: 'Không gian đọc số lấy typography làm trung tâm, giúp những câu chuyện dài vẫn thân thiện và dễ khám phá.',
+        tags: ['Art direction', 'Frontend'], color: '#bed64a', visual: 'sora',
+      },
+    ],
+  },
+  about: {
+    eyebrow: '02 / TÔI LÀ AI',
+    title: 'Code tốt giải quyết vấn đề.',
+    emphasis: 'Code tuyệt vời',
+    titleEnd: 'còn tạo cảm xúc.',
+    paragraphs: [
+      'Tôi là Mujin — frontend developer yêu những giao diện có nhịp điệu, sản phẩm có logic và những chi tiết khiến người dùng mỉm cười.',
+      'Tôi làm việc ở giao điểm giữa thiết kế và kỹ thuật, đủ gần với cả hai để giữ nguyên tinh thần của ý tưởng khi nó đi vào thực tế.',
+    ],
+    locationLabel: 'Đang sống tại',
+    location: 'Việt Nam',
+    orbit: 'THỦ CÔNG • TÒ MÒ • RÕ RÀNG • ',
+    quote: 'Tôi tin thiết kế tốt không cần phải hét lớn — nó chỉ cần nói đúng điều, đúng lúc.',
+  },
+  services: {
+    eyebrow: '03 / TÔI CÓ THỂ GIÚP GÌ',
+    title: 'Từ ý tưởng',
+    emphasis: 'đến sản phẩm.',
+    items: [
+      { number: '01', title: 'Giao diện web', description: 'Xây dựng giao diện responsive, có hệ thống và dễ phát triển tiếp bằng React.' },
+      { number: '02', title: 'Trải nghiệm sản phẩm', description: 'Biến luồng sử dụng phức tạp thành trải nghiệm rõ ràng, tự nhiên và nhất quán.' },
+      { number: '03', title: 'Creative development', description: 'Thêm chuyển động và tương tác có chủ đích để sản phẩm có cá tính riêng.' },
+    ],
+  },
+  contact: {
+    eyebrow: '04 / BẮT ĐẦU MỘT ĐIỀU HAY',
+    title: 'Có một ý tưởng?',
+    emphasis: 'Cùng làm nó sống dậy.',
+    email: 'YOUR@EMAIL.COM',
+    copied: 'ĐÃ SAO CHÉP!',
+    localTime: 'GIỜ ĐỊA PHƯƠNG',
+    findMe: 'TÌM TÔI TRÊN',
+  },
+  footer: {
+    crafted: 'THIẾT KẾ CÓ CHỦ ĐÍCH • XÂY DỰNG BẰNG REACT',
+    top: 'LÊN ĐẦU TRANG ↑',
+  },
+}
+
+export default vi
