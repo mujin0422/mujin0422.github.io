@@ -9,13 +9,10 @@ export default function MainContent() {
     <main id="top">
       <section className="reset-stage" aria-labelledby="portfolio-title">
         <div className="reset-grid" aria-hidden="true" />
-        <div className="reset-kicker"><span /> PORTFOLIO / 2026</div>
         <div className="reset-title-wrap">
-          <p>CREATIVE DEVELOPER</p>
           <h1 id="portfolio-title" className="hero-glitch" data-text="MUJIN" aria-label="MUJIN">MUJIN<span>.</span></h1>
         </div>
         <div className="reset-bottom">
-          <p>{messages.hero.description}</p>
           <Button variant="link" asChild className="reset-explore">
             <a href="#projects">
               {messages.hero.explore} <span aria-hidden="true">↗</span>
