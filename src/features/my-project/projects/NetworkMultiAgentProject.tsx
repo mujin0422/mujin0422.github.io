@@ -1,17 +1,27 @@
 import ProjectFrame from '@/components/shared/ProjectFrame'
-import ProjectDetails, { type ProjectLabels } from '../components/ProjectDetails'
 import NetworkVisual from '../visuals/NetworkVisual'
-import type { PortfolioProject } from '@/types/portfolio'
+import type { PortfolioMessages, PortfolioProject } from '@/types/portfolio'
 
 interface NetworkMultiAgentProjectProps {
   project: PortfolioProject
-  labels: ProjectLabels
+  labels: Pick<PortfolioMessages['work'], 'highlightsLabel' | 'stackLabel' | 'sourceLabel'>
 }
 
 export default function NetworkMultiAgentProject({ project, labels }: NetworkMultiAgentProjectProps) {
   return (
-    <ProjectFrame titleId={`project-${project.id}`} visual={<NetworkVisual />}>
-      <ProjectDetails project={project} labels={labels} />
-    </ProjectFrame>
+    <ProjectFrame
+      id={project.id}
+      name={project.name}
+      category={project.category}
+      status={project.status}
+      description={project.description}
+      highlights={project.highlights}
+      tags={project.tags}
+      links={project.links}
+      visual={<NetworkVisual />}
+      highlightsLabel={labels.highlightsLabel}
+      stackLabel={labels.stackLabel}
+      sourceLabel={labels.sourceLabel}
+    />
   )
 }
