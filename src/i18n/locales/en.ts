@@ -26,8 +26,8 @@ const en: PortfolioMessages = {
     highlightsLabel: 'Highlights',
     stackLabel: 'Tech stack',
     sourceLabel: 'Source code',
-    projects: [
-      {
+    projects: {
+      evidence: {
         id: '01',
         name: 'Evidence Note Board',
         category: 'LINUX DESKTOP APPLICATION',
@@ -39,12 +39,11 @@ const en: PortfolioMessages = {
           'Rust backend communicates over D-Bus and persists data locally in SQLite.',
         ],
         tags: ['Rust', 'GJS', 'GNOME Shell', 'Wayland', 'SQLite', 'D-Bus'],
-        visual: 'evidence',
         links: [
           { label: 'GitHub', href: 'https://github.com/mujin0422/evidence-note-board' },
         ],
       },
-      {
+      network: {
         id: '02',
         name: 'Network Multi-Agent System',
         category: 'AI / NETWORK AUTOMATION',
@@ -56,13 +55,12 @@ const en: PortfolioMessages = {
           'React/TypeScript dashboard; many screens currently use sample data pending backend integration.',
         ],
         tags: ['Python', 'FastAPI', 'LangGraph', 'PostgreSQL', 'React', 'TypeScript', 'GNS3', 'Docker'],
-        visual: 'network',
         links: [
           { label: 'Backend', href: 'https://github.com/mujin0422/network-multi-agent-system-backend' },
           { label: 'Frontend', href: 'https://github.com/mujin0422/network-multi-agent-system-frontend' },
         ],
       },
-    ],
+    },
   },
   about: {
     eyebrow: '02 / ABOUT ME',

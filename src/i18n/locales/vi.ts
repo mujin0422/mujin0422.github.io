@@ -26,8 +26,8 @@ const vi: PortfolioMessages = {
     highlightsLabel: 'Điểm nổi bật',
     stackLabel: 'Công nghệ sử dụng',
     sourceLabel: 'Mã nguồn',
-    projects: [
-      {
+    projects: {
+      evidence: {
         id: '01',
         name: 'Evidence Note Board',
         category: 'LINUX DESKTOP APPLICATION',
@@ -39,12 +39,11 @@ const vi: PortfolioMessages = {
           'Rust backend giao tiếp qua D-Bus, lưu dữ liệu cục bộ bằng SQLite.',
         ],
         tags: ['Rust', 'GJS', 'GNOME Shell', 'Wayland', 'SQLite', 'D-Bus'],
-        visual: 'evidence',
         links: [
           { label: 'GitHub', href: 'https://github.com/mujin0422/evidence-note-board' },
         ],
       },
-      {
+      network: {
         id: '02',
         name: 'Network Multi-Agent System',
         category: 'AI / NETWORK AUTOMATION',
@@ -56,13 +55,12 @@ const vi: PortfolioMessages = {
           'Dashboard React/TypeScript; nhiều màn hình đang dùng dữ liệu mẫu và chờ tích hợp backend.',
         ],
         tags: ['Python', 'FastAPI', 'LangGraph', 'PostgreSQL', 'React', 'TypeScript', 'GNS3', 'Docker'],
-        visual: 'network',
         links: [
           { label: 'Backend', href: 'https://github.com/mujin0422/network-multi-agent-system-backend' },
           { label: 'Frontend', href: 'https://github.com/mujin0422/network-multi-agent-system-frontend' },
         ],
       },
-    ],
+    },
   },
   about: {
     eyebrow: '02 / TÔI LÀ AI',

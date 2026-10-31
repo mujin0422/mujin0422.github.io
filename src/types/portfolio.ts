@@ -1,7 +1,5 @@
 export type Language = 'vi' | 'en'
 
-export type ProjectVisual = 'evidence' | 'network'
-
 export interface PortfolioProject {
   id: string
   name: string
@@ -10,7 +8,6 @@ export interface PortfolioProject {
   description: string
   highlights: string[]
   tags: string[]
-  visual: ProjectVisual
   links: Array<{ label: string; href: string }>
 }
 
@@ -46,7 +43,10 @@ export interface PortfolioMessages {
     highlightsLabel: string
     stackLabel: string
     sourceLabel: string
-    projects: PortfolioProject[]
+    projects: {
+      evidence: PortfolioProject
+      network: PortfolioProject
+    }
   }
   about: {
     eyebrow: string
