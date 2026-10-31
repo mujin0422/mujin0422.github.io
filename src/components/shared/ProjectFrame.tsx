@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card } from '@/components/ui/card'
 
 interface ProjectFrameProps {
   titleId: string
@@ -7,14 +7,12 @@ interface ProjectFrameProps {
   children: ReactNode
 }
 
-/** Reusable frame only: the owning feature supplies its artwork and content. */
+/** Only the outer frame: project-specific visuals and details come from feature slots. */
 export default function ProjectFrame({ titleId, visual, children }: ProjectFrameProps) {
   return (
     <Card className="project-frame" role="article" aria-labelledby={titleId}>
       {visual}
-      <CardContent className="project-frame__body">
-        {children}
-      </CardContent>
+      <div className="project-frame__body">{children}</div>
     </Card>
   )
 }
